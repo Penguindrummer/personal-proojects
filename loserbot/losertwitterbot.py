@@ -34,9 +34,10 @@ mentions = api.mentions_timeline(
 last_seen_id,tweet_mode = 'extended')
 
 
+#replies to a post only with a certain hashtag
 mentions = api.mentions_timeline()
 for mention in mentions:
     print(str(mention.id) + "-" + mention.text)
-    if '#hiyataaaaaaaaa' in mention.text.lower():
-        print('found #hiyataaaaaaaaa')
+    if '#inserthashtag' in mention.text.lower():
+        print('found #inserthashtag)
         print('response in progress...')
