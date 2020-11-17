@@ -2,10 +2,12 @@ import tweepy
 
 print("this is my dumb twitter bot!")
 
-CONSUMER_KEY = "aLrUdrQnyCERjJTdlT36SPCTs"
-CONSUMER_SECRET = "qO6fLQx8si4OQ56qF1I2AvktJe196ZnoJ74fOBgvO9x6dc3v41"
-ACCESS_KEY = "1266072105541603329-TLUfmREXfmDliy2GIPLSpUlO4UyzD5"
-ACCESS_SECRET = "5pAVSWoGMBEmn0srvZxYc4lCOdJbemvSeVMcyzp4IrVLa"
+#have to have a twitter developers account
+#insert your own keys here
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+ACCESS_KEY = ""
+ACCESS_SECRET = ""
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
@@ -31,7 +33,7 @@ last_seen_id = retrieve_last_seen_id(FILE_NAME)
 mentions = api.mentions_timeline(
 last_seen_id,tweet_mode = 'extended')
 
-#replying to tweets from oldest to newest
+
 mentions = api.mentions_timeline()
 for mention in mentions:
     print(str(mention.id) + "-" + mention.text)
